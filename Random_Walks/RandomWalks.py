@@ -29,9 +29,6 @@ NUM_WALKERS = 4
 ER_PROBABILITY = 0.20
 NUM_STEPS = 30
 USAGE = r"""
-Random Walks Simulator
-
-Usage:
     RandomWalks.py -w <Number of Walkers> -r <Rate of Escape> -n <Number of Nodes> -p <ER Probability>
 
 Flags (all optional; defaults shown in brackets):
@@ -95,24 +92,31 @@ def main():
     # compile images into a gif
 
     # Parse command line arguments
-    cli_parser = argparse.ArgumentParser(description="Random Walks Simulation", usage=USAGE)
-    cli_parser.add_argument("--walkers",
+    cli_parser = argparse.ArgumentParser(description="Random Walks Simulation", usage=USAGE, add_help=False)
+    cli_parser.add_argument("-w", "--walkers",
                             type=int,
                             default=NUM_WALKERS,
                             help="Number of walkers")
-    cli_parser.add_argument("--rate",
+    cli_parser.add_argument("-r", "--rate",
                             type=float,
                             default=RATE_OF_ESCAPE,
                             help="Rate of escape")
-    cli_parser.add_argument("--nodes",
+    cli_parser.add_argument("-n", "--nodes",
                             type=int,
                             default=NUM_NODES,
                             help="Number of nodes")
-    cli_parser.add_argument("--probability",
+    cli_parser.add_argument("-p", "--probability",
                             type=float,
                             default=ER_PROBABILITY,
                             help="ER graph probability")
+    cli_parser.add_argument("-h", "--help",
+                            action="store_true",
+                            help="Show this help message and exit")
     args = cli_parser.parse_args()
+    
+    if args.help:
+        print(USAGE)
+        sys.exit(0)
 
     # quick args check
     num_walkers = args.walkers
@@ -185,7 +189,7 @@ def main():
             # Draw the path
             path_coords = np.array([pos[node] for node in path])
             plt.plot(path_coords[:, 0], path_coords[:, 1], 
-                    color=walker_colors[i], alpha=0.7, linewidth=2, label=f'Walker {i+1}')
+                    color=walker_colors[i], alpha=0.7, linewidth=2.3, label=f'Walker {i+1}')
             
             # Draw current walker position as a larger marker
             walker_pos = pos[walker_node]

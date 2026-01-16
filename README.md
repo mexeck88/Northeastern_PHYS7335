@@ -17,7 +17,7 @@ Simulation and visualization of random walks on various graph topologies (Erdős
 1. Clone the repo or download the directory.
 2. Install dependencies:
    ```bash
-   pip install networkx matplotlib numpy pillow tqdm
+   pip install -r requirements.txt
    ```
 
 ### Usage

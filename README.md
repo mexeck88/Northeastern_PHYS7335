@@ -56,3 +56,47 @@ The script creates an `output/` directory containing:
 
 - The **Stochastic Visualization** uses the parameters provided via command line.
 - The **Deterministic Analysis** runs on hardcoded larger graphs (1000 nodes, 10000 walkers) to ensure statistical significance.
+
+---
+
+## SIR Epidemic Models
+
+Exploration of the Susceptible-Infectious-Recovered (SIR) model through mathematical comparison and network-based simulation.
+
+### 1. Deterministic vs Stochastic Analysis (`SIR_Deterministic.ipynb`)
+
+A Jupyter Notebook comparing the classic deterministic approach against stochastic simulations.
+
+- **Mathematical Model**: Solves the system of discrete-time difference equations for $S(t)$, $I(t)$, and $R(t)$.
+- **Comparison**: Contrasts the "average behavior" of infinite populations (Deterministic) with the variability of finite populations (Stochastic).
+- **Parameter Sweeps**: Analyzes the effect of varying infection rates ($\beta$) on the epidemic curve.
+
+### 2. Network Visualization (`SIRVisual.py`)
+
+A Python module for simulating and visualizing SIR epidemics on complex networks. It visualizes the spread of infection node-by-node and compiles the frames into an animated GIF.
+
+#### Features
+- **Graph Generation**: Supports Erdős-Rényi (ER), Watts-Strogatz (WS), and Barabási-Albert (BA) topologies.
+- **Visualization**: Coloring nodes based on state (Susceptible, Infectious, Recovered) over time.
+- **GIF Export**: Automatically saves animations of the outbreak.
+
+#### Usage
+
+Run with default parameters (Nodes: 100, Beta: 0.3, Gamma: 0.1):
+```bash
+python SIRVisual.py
+```
+
+**Custom Parameters:**
+```bash
+python SIRVisual.py --nodes 200 --beta 0.5 --gamma 0.05 --steps 150
+```
+
+#### Command-Line Options
+
+| Flag | Short | Default | Description |
+|------|-------|---------|-------------|
+| `--nodes` | `-n` | 100 | Number of nodes in the graph |
+| `--beta` | `-b` | 0.3 | Infection probability ($S \to I$) |
+| `--gamma` | `-g` | 0.1 | Recovery probability ($I \to R$) |
+| `--steps` | `-s` | 100 | Number of simulation steps |

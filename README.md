@@ -5,6 +5,10 @@ Collection of projects and assignments from Northeastern University's Dynamical 
 
 Simulation and visualization of random walks on various graph topologies (Erdős-Rényi, Watts-Strogatz, Barabási-Albert, and Configuration Model).
 
+### Visualization example
+
+![Alt Text](demo/RandWalk_demo.gif)
+
 ### Features
 
 - **Stochastic Visualization**: Generates animated GIFs of random walkers on small graphs.
@@ -63,6 +67,11 @@ The script creates an `output/` directory containing:
 
 Exploration of the Susceptible-Infectious-Recovered (SIR) model through mathematical comparison and network-based simulation.
 
+### Visualization example
+
+![Alt Text](demo/SIR_demo.gif)
+
+
 ### 1. Deterministic vs Stochastic Analysis (`SIR_Deterministic.ipynb`)
 
 A Jupyter Notebook comparing the classic deterministic approach against stochastic simulations.
@@ -74,6 +83,7 @@ A Jupyter Notebook comparing the classic deterministic approach against stochast
 ### 2. Network Visualization (`SIRVisual.py`)
 
 A Python module for simulating and visualizing SIR epidemics on complex networks. It visualizes the spread of infection node-by-node and compiles the frames into an animated GIF.
+It is important to note that within `SIRVisual.py` we are incorrectly using beta, we should be using `beta = degree * infect_rate` but instead are not factoring in degree into beta. Instead we are rng'ing on each edge for probability beta for each timestep.
 
 #### Features
 - **Graph Generation**: Supports Erdős-Rényi (ER), Watts-Strogatz (WS), and Barabási-Albert (BA) topologies.

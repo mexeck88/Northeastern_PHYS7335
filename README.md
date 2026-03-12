@@ -110,3 +110,30 @@ python SIRVisual.py --nodes 200 --beta 0.5 --gamma 0.05 --steps 150
 | `--beta` | `-b` | 0.3 | Infection probability ($S \to I$) |
 | `--gamma` | `-g` | 0.1 | Recovery probability ($I \to R$) |
 | `--steps` | `-s` | 100 | Number of simulation steps |
+
+### 3. SLIR Model Exploration (`SLIR_Slim.ipynb`)
+   * Exploration and implementation of the Susceptible-Latent-Infectious-Recovered (SLIR) model.
+   * **Model Expansion:** Adds a "Latent" compartment to the classic SIR model, capturing the delay between exposure and infectiousness.
+   * **Deterministic vs Stochastic:** Implements difference equations and simulations contrasting theoretical latent progression against random agent-level variation.
+
+### 4. Competing Epidemics (`SI_Comp_SII.ipynb`)
+   * Investigates multi-strain/competing disease dynamics using pure Susceptible-Infectious models.
+   * **SI/SII Framework:** Analyzes systems where multiple variants or pathogens compete and spread through a population simultaneously.
+   * **Evolution of Infection:** Observes the competitive advantage of variants and evolution of the pathogen across populations over time.
+
+### 5. Second Epidemic Wave (`SIR_Second_Epidemic.ipynb`)
+   * Examines the mathematical occurrence and behavior of a renewed outbreak.
+   * **Repeat Infection Modeling:** Simulates a second wave ("repeat epidemic") of infection within the SIR framework.
+   * **Comparative Analysis:** Contrasts deterministic expectations of trailing epidemic waves with stochastic realities and sudden resurgences.
+
+### 6. Growth Rate Analysis (`Growth_rate.ipynb`)
+   * Focuses on the comparative growth metrics between simple and delayed-onset viral trajectories.
+   * **SEIR vs SIR Comparison:** Evaluates and contrasts the mathematical growth curves of models with an "Exposed" period against those without.
+   * **Metric Extraction:** Directly calculates and plots infected population growth rates mapped against various transmission ($\beta$) coefficients.
+
+### 7. Agent-Based Network Modeling (`Agent_based.ipynb`)
+   * Granular approach explicitly controlling and stepping over non-compartmental simulated agents.
+   * **Explicit Topologies:** Models individual-level infection spread relying heavily on adjacency matrices (like Erdős-Rényi configuration graphs).
+   * **Exact Initialization:** Rigorously defines non-compartmental initial state conditions ($S_0$, $I_0$, $R_0$) in discrete networked agent populations (e.g., $N=100$).
+
+## Rumor Model

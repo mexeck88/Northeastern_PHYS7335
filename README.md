@@ -137,3 +137,30 @@ python SIRVisual.py --nodes 200 --beta 0.5 --gamma 0.05 --steps 150
    * **Exact Initialization:** Rigorously defines non-compartmental initial state conditions ($S_0$, $I_0$, $R_0$) in discrete networked agent populations (e.g., $N=100$).
 
 ## Rumor Model
+
+This section explores the spread of rumors across different network topologies using a modified infectious disease model. 
+
+### The Model
+The simulation categorizes nodes into three distinct states:
+* **Ignorant (Blue):** Nodes that have not yet heard the rumor (Susceptible).
+* **Spreader (Red):** Nodes actively spreading the rumor to their neighbors (Infected).
+* **Stifler (Green):** Nodes that have heard the rumor but have stopped spreading it (Recovered).
+
+The dynamics of the simulation are governed by two main parameters:
+* **Spreading Rate (λ):** The probability that a Spreader successfully transmits the rumor to an Ignorant neighbor during contact.
+* **Stifling Rate (α):** The probability that a Spreader becomes a Stifler after contacting another Spreader or a Stifler.
+
+### Network Topology Comparisons: Watts-Strogatz
+
+Below are visualizations of the rumor spreading on Watts-Strogatz (Small-World) networks. 
+
+*(Note: Adjust the file paths below if your GIFs are stored in a specific folder like `output/`)*
+
+![Alt Text](demo/SIR_demo.gif)
+![Alt Text](demo/SIR_demo.gif)
+
+### Running the Simulation
+You can generate your own visualizations using the `RumorVisual.py` script. By default, the simulation evaluates Erdős-Rényi, Watts-Strogatz, Barabási-Albert, and Configuration models on 100 nodes for 100 steps with λ=0.3 and α=0.1. 
+
+```bash
+python3 RumorVisual.py -n 100 -l 0.3 -a 0.1 -s 100

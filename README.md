@@ -152,9 +152,7 @@ The dynamics of the simulation are governed by two main parameters:
 
 ### Network Topology Comparisons: Watts-Strogatz
 
-Below are visualizations of the rumor spreading on Watts-Strogatz (Small-World) networks. 
-
-*(Note: Adjust the file paths below if your GIFs are stored in a specific folder like `output/`)*
+Below are visualizations of the rumor spreading on Watts-Strogatz (Small-World) networks. We chose to compare the Clustering of two extremes to demonstrate how the rumor model is influenced by such model parameters.
 
 ![Alt Text](demo/WS_HighCluster_100_Rumor_animation.gif)
 ![Alt Text](demo/WS_LowCluster_100_Rumor_animation.gif)

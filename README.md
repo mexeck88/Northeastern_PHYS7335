@@ -1,6 +1,36 @@
 # Northeastern_PHYS7335
 Collection of projects and assignments from Northeastern University's Dynamical Processes on Complex Networks course.
 
+## Table of Contents
+* [Random Walks](#random-walks)
+  * [Visualization example](#visualization-example)
+  * [Features](#features)
+  * [Installation](#installation)
+  * [Usage](#usage)
+    * [Basic Usage](#basic-usage)
+    * [Custom Parameters](#custom-parameters)
+    * [Command-Line Options](#command-line-options)
+    * [Output](#output)
+    * [Notes](#notes)
+* [SIR Epidemic Models](#sir-epidemic-models)
+  * [Visualization example](#visualization-example-1)
+  * [1. Deterministic vs Stochastic Analysis (`SIR_Deterministic.ipynb`)](#1-deterministic-vs-stochastic-analysis-sir_deterministicipynb)
+  * [2. Network Visualization (`SIRVisual.py`)](#2-network-visualization-sirvisualpy)
+    * [Features](#features-1)
+    * [Usage](#usage-1)
+    * [Command-Line Options](#command-line-options-1)
+  * [3. SLIR Model Exploration (`SLIR_Slim.ipynb`)](#3-slir-model-exploration-slir_slimipynb)
+  * [4. Competing Epidemics (`SI_Comp_SII.ipynb`)](#4-competing-epidemics-si_comp_siiipynb)
+  * [5. Second Epidemic Wave (`SIR_Second_Epidemic.ipynb`)](#5-second-epidemic-wave-sir_second_epidemicipynb)
+  * [6. Growth Rate Analysis (`Growth_rate.ipynb`)](#6-growth-rate-analysis-growth_rateipynb)
+  * [7. Agent-Based Network Modeling (`Agent_based.ipynb`)](#7-agent-based-network-modeling-agent_basedipynb)
+* [Rumor Model](#rumor-model)
+  * [The Model](#the-model)
+  * [Network Topology Comparisons: Watts-Strogatz](#network-topology-comparisons-watts-strogatz)
+  * [Running the Simulation](#running-the-simulation)
+
+---
+
 ## Random Walks
 
 Simulation and visualization of random walks on various graph topologies (Erdős-Rényi, Watts-Strogatz, Barabási-Albert, and Configuration Model).

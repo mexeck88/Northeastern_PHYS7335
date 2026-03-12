@@ -156,8 +156,8 @@ Below are visualizations of the rumor spreading on Watts-Strogatz (Small-World) 
 
 *(Note: Adjust the file paths below if your GIFs are stored in a specific folder like `output/`)*
 
-![Alt Text](demo/SIR_demo.gif)
-![Alt Text](demo/SIR_demo.gif)
+![Alt Text](demo/WS_HighCluster_100_Rumor_animation.gif)
+![Alt Text](demo/WS_LowCluster_100_Rumor_animation.gif)
 
 ### Running the Simulation
 You can generate your own visualizations using the `RumorVisual.py` script. By default, the simulation evaluates Erdős-Rényi, Watts-Strogatz, Barabási-Albert, and Configuration models on 100 nodes for 100 steps with λ=0.3 and α=0.1. 
